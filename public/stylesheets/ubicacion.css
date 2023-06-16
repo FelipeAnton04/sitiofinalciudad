@@ -1,0 +1,160 @@
+#escudo{
+    z-index: 9999;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+#navbarScroll{
+    margin-left: 170px;
+}
+#buscador{
+    color: white;
+    border-color: white;
+}
+#buscador:hover{
+    color: black;
+    background-color: white;
+}
+.navbar{
+    font-family: 'Roboto Condensed', sans-serif; 
+    align-content: space-around;
+    font-size: large;
+}
+.nav-item{
+    border-left: solid 1px #000;
+    float: left;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+#navegadores:hover{
+    color: black;
+    background-color: #c4c4c4 ;    
+}
+.dropbtn{
+    background:local;
+    border: none;
+    padding: 8px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color:#c4c4c4;
+    color: black;
+}
+.hero{
+    background: url(../img/fotociudad2.jpg);
+    background-size: cover;
+    min-height: 500px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif; 
+    align-content: space-around;
+    font-size: large;
+}
+#Aifa{
+    font-family:'Roboto Condensed', sans-serif;
+}
+#fotosytabla{
+    padding-top: 20px;
+}
+#carouselExample{
+    padding-top: 20px;
+}
+#mapa{
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 20px;
+}
+#ubicacion{
+    text-align: left;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    padding-left: 30px;
+}
+#informacion{
+    font-size: 12px;
+    margin-top: 20px;
+}
+#Pos1{
+    background-color: #c4c4c4;
+}
+#escudos{
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+#infopartido{
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 5px;
+}
+#proximo{
+    border: 1px solid #e1e1e1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 112%;
+}
+#proximoPartido{
+    text-align: left;
+}
+#goleadores{
+    margin-top: 37px;
+    margin-left: 12px;
+}
+#partidos{
+    padding-top: 9px;
+    padding-bottom: 3px;
+    font-size: 16px;
+}
+#partidos2{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#partidos3{
+    padding-top: 3px;
+    padding-bottom: 6px;
+}
+#esc1{
+    padding-left: 3px;
+}
+#suspendido{
+    color: red;
+}
+#roja{
+    color: red;
+}
+#suspensiones{
+    margin-top: 30px;
+}
+#caruselFotos{
+    padding-top: 110px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#textoInfo{
+    text-align: left;
+}
