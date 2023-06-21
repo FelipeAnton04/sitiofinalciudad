@@ -1,5 +1,5 @@
 <head>
-        <link rel="stylesheet" href="/stylesheets/sitio.css">
+    <link rel="stylesheet" href="/stylesheets/sitio.css">
 </head>
 <div id="home" class="row  hero">
     <div class="col-lg-3 offset-lg-2">
@@ -7,13 +7,13 @@
 </div>
 <div class="container text-center" id="pagPrincipal">
     <div class="row">
-        <div class="col-8" id="noticias">
+        <div class="col-6" id="noticias">
             <h5><strong>Noticias</strong></h5>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-slide="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <button class="btn" type="button">
-                            <img src="images/convocados1chica.jpg" class="d-block w-100" height="375px" id="fotos">
+                            <img src="images/convocados1chica.jpg" class="d-block w-100" height="330px" id="fotos">
                             <div class="carousel-caption d-none d-md-block" id="carusel">
                                 <p>Aifa - Convocados para enfrentar a Galicia</p>
                             </div>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="carousel-item">
                         <button class="btn" type="button">
-                            <img src="images/convocados3.jpg" class="d-block w-100" height="375px" id="fotos">
+                            <img src="images/convocados3.jpg" class="d-block w-100" height="330px" id="fotos">
                             <div class="carousel-caption d-none d-md-block" id="carusel">
                                 <p>Sub 23 - Convocados ante Tocalli B</p>
                             </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="carousel-item">
                         <button class="btn" type="button">
-                            <img src="images/resultado1.jpg" class="d-block w-100" height="375px" id="fotos">
+                            <img src="images/resultado1.jpg" class="d-block w-100" height="330px" id="fotos">
                             <div class="carousel-caption d-none d-md-block" id="carusel">
                                 <p>Resultado y Resumen contra Galicia.</p>
                             </div>
@@ -48,7 +48,7 @@
                 </button>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-3">
             <div class="container" id="Fixture">
                 <h5 id="proximoPartido"><strong>Proximos partidos</strong></h5>
                 <section id="partidos" style="margin-bottom: -20px !important;">
@@ -80,8 +80,7 @@
                                 <span id="infopartido">
                                     <p>
                                         <strong>Fecha 2 - Sub 23</strong>
-                                        <br>Viernes 19/05/2023 - <strong id="suspendido">Suspendido</strong> <img
-                                            src="images/rain.png" width="14px" height="14px ">
+                                        <br>Viernes 19/05/2023
                                     </p>
                                 </span>
                             </div>
@@ -98,8 +97,7 @@
                                 <span id="infopartido">
                                     <p>
                                         <strong> Fecha 5 - Juveniles</strong>
-                                        <br>Sabado 20/05/2023 - <strong id="suspendido">Suspendido</strong> <img
-                                            src="images/rain.png" width="14px" height="14px ">
+                                        <br>Sabado 20/05/2023
                                     </p>
                                 </span>
                             </div>
@@ -107,6 +105,35 @@
                     </div>
                 </section>
             </div>
+        </div>
+        <div class="col-3">
+            <h5 style="text-align:left ;"><strong>Entrevistas</strong></h5>
+            <div id="entrevistas">
+                <ul class="lista-entrevista">
+                    {{#each entrevistas}}
+                    <li>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
+                            src="images/escudociudad2.png" alt="escudociudad"><strong>{{jugador}}</strong></a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{#each entrevistas}}
+            <div class="modal fade" tabindex="-1" id="modal{{id}}" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel">{{jugador}}</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3>{{pregunta}}</h3>
+                            <p>{{respuesta}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
         </div>
     </div>
 </div>

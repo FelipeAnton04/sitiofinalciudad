@@ -1,10 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+var entrevistaModel = require('../models/entrevistaModel');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', async function (req, res, next) {
+
+  var entrevistas = await entrevistaModel.getEntrevistas()
+  res.render('index', {
+    entrevistas
+   });
 });
 
 router.post('/', async (req, res, next) => {

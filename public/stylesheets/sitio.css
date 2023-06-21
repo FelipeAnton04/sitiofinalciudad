@@ -73,10 +73,9 @@
     font-size: large;
 }
 #escudos{
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     margin-top: 5px;
-    margin-right: 15px;
 }
 #infopartido{
     font-size: 15px;
@@ -84,16 +83,16 @@
     margin-top: 5px;
 }
 #partidos2{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 #proximo{
     border: 1px solid #e1e1e1;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 120%;
+    width: 110%;
 }
 #partidos3{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 #proximoPartido{
     text-align: left;
@@ -146,4 +145,35 @@
 }
 #suspendido{
     color: red;
+}
+.lista-entrevista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lista-entrevista li{
+    margin: 4px 0;
+}
+.lista-entrevista li a {
+    background-color: #fff;
+    font-family:'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    color: #000;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+.lista-entrevista li a:hover{
+    color: #fff;
+    background-color: #000;
+}
+.lista-entrevista li a img{
+    width: 50px;
+    height: 50px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-right: 1.4rem;
+}
+#entrevistas{
+    border: 1px solid #e1e1e1;
 }

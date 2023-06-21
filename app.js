@@ -4,13 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-
+require('dotenv').config();
 var session = require('express-session');
 
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/admin/login');
-var adminRouter = require ('./routes/admin/novedades');
+var adminRouter = require ('./routes/admin/entrevistas');
 var primeraRouter = require('./routes/primera');
 var sub23Router = require('./routes/sub23');
 var juvenilesRouter = require('./routes/juveniles');
@@ -59,9 +59,9 @@ app.use(session({
 }));
 
 secured = async (req, res, next)=>{
-  try {
-    console.log (req.session.id_usuario);
-    if (req.session.id_usuario){
+    try {
+    console.log (req.session.id_usuarios);
+    if (req.session.id_usuarios){
       next();
     } else {
       res.redirect('/admin/login')
@@ -73,7 +73,7 @@ secured = async (req, res, next)=>{
 
 app.use('/', indexRouter);
 app.use('/admin/login', loginRouter);
-app.use('/admin/novedades', secured, adminRouter);
+app.use('/admin/entrevistas',secured, adminRouter);
 app.use('/primera', primeraRouter);
 app.use('/sub23' , sub23Router);
 app.use('/juveniles' , juvenilesRouter);
@@ -101,7 +101,6 @@ app.use('/fotos5' , fotos5Router);
 app.use('/fotos6' , fotos6Router);
 app.use('/redes' , redesRouter);
 
-require('dotenv'), config();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
