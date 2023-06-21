@@ -1,0 +1,26 @@
+<div class="container" style="margin:200px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Modificar la entrevista</h4>
+            <form action="/admin/entrevistas/modificar" method="post">
+                <input type="hidden" value="{{entrevista.id}}" name="id">
+                <div class="form-group">
+                    <label for="">Jugador</label>
+                    <input type="text" class="form-control" name="jugador" value="{{entrevista.jugador}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Pregunta</label>
+                    <input type="text" class="form-control" name="pregunta" value="{{entrevista.pregunta}}">                    
+                </div>
+                <div class="form-group">
+                    <label for="">Respuesta</label>
+                    <textarea name="respuesta" class="form-control">{{entrevista.respuesta}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </form>
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}    
+        </div>
+    </div>
+</div>

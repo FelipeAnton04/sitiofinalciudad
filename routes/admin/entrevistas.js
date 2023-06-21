@@ -49,4 +49,36 @@ router.post('/agregar', async (req, res, next) => {
     }
 });
 
+router.get('/modificar/:id', async (req,res,next)=>{
+    var id = req.params.id;
+    var entrevista = await entrevistasModel.getEntrevistaById(id);
+    res.render('admin/modificar', {
+        layout:'admin/layout',
+        entrevista
+    });
+});
+
+router.post('/modificar', async(req,res,next)=>{
+    try{
+        console.log(req.body.id);
+        var obj = {
+            jugador: req.body.jugador,
+            pregunta: req.body.pregunta,
+            respuesta: req.body.respuesta
+        }
+
+        console.log(obj)
+        await entrevistasModel.modificarEntrevistasById(obj, req.body.id);
+        res.redirect('/admin/entrevistas');        
+    } 
+    catch (error){
+        console.log(error)
+        res.render('admin/modificar', {
+            layout: 'admin/layout',
+            error: true,
+            message: 'No se modifico la entrevista'
+        })
+    }
+});
+
 module.exports = router;
