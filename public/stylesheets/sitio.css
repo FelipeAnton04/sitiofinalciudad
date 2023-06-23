@@ -177,3 +177,20 @@
 #entrevistas{
     border: 1px solid #e1e1e1;
 }
+#buscador1{
+    color: black;
+    border-color: black;
+}
+#buscador1:hover{
+    color: white;
+    background-color: black;
+}
+#pregunta{
+    color: black;
+    border-color: black;
+    margin-top: 5px;
+}
+#pregunta:hover{
+    color: white;
+    background-color: black;
+}

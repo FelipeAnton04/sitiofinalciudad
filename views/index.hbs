@@ -113,13 +113,14 @@
                     {{#each entrevistas}}
                     <li>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
-                            src="images/escudociudad2.png" alt="escudociudad"><strong>{{jugador}}</strong></a>
+                                src="images/escudociudad2.png" alt="escudociudad"><strong>{{jugador}}</strong></a>
                     </li>
                     {{/each}}
                 </ul>
             </div>
             {{#each entrevistas}}
-            <div class="modal fade" tabindex="-1" id="modal{{id}}" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" tabindex="-1" id="modal{{id}}" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -134,6 +135,51 @@
                 </div>
             </div>
             {{/each}}
+            <button id="pregunta" type="button" class="btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Pregunta
+                vos tambien!</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title" id="exampleModalLabel">Entrevista!</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3" action="/" method="post">
+                                <div class="col-md-6">
+                                    <label for="inputName4" class="form-label">Nombre</label>
+                                    <input type="name" class="form-control" id="inputName4" name="nombre1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="form-label">Apellido</label>
+                                    <input type="surname" class="form-control" id="inputPassword4" name="apellido1">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4" name="email1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Nombre del
+                                        Jugador</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        name="jugador"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Pregunta que le quieras
+                                        hacer</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        name="pregunta"></textarea>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-outline-success" type="submit" id="buscador1">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
